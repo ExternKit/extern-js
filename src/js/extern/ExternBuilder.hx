@@ -6,6 +6,10 @@ import haxe.macro.Compiler;
 import haxe.macro.Context;
 import haxe.macro.Expr;
 import haxe.macro.Type;
+#if (haxe_ver >= 4)
+import haxe.ds.Map;
+#end
+
 
 using StringTools;
 
