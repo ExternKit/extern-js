@@ -119,7 +119,7 @@ class ExternBuilder
                             }
                         case mode if (MODES.indexOf(mode) != -1):
                             switch (value) {
-                                case { expr: EConst(CIdent(overload)) } | { expr: EConst(CString(overload)) }:  this.names[mode] = overload;
+                                case { expr: EConst(CIdent(overloaded)) } | { expr: EConst(CString(overloaded)) }:  this.names[mode] = overloaded;
                                 case _: Context.fatalError('Invalid value for "${mode}" parameter. Expected a string or an identifier, got ${value.expr}.', value.pos);
                             }
                         case _:
