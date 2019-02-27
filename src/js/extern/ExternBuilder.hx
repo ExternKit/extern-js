@@ -32,7 +32,7 @@ class ExternBuilder
     private static function get_accessMode() : String
     {
         if (null == ExternBuilder.accessMode) {
-            var definedMode = Compiler.getDefine('extkit_mode');
+            var definedMode = Context.definedValue('extkit_mode');
             ExternBuilder.accessMode = ((MODES.indexOf(definedMode) == -1) ? Require : definedMode);
         }
 
